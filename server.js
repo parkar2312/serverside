@@ -4,6 +4,9 @@ const connectDB =require('./DBconnection/connection');
 
 connectDB();
 
+app.get('/',function(req,res){
+    res.send("hello universe");
+});
 app.use(express.json({extended:false}))
 app.use('/api/userModel', require('./API/User'));
 
